@@ -143,6 +143,9 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 USE_DEX2OAT_DEBUG := false
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.perflock.enable=0
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
