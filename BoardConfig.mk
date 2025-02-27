@@ -15,12 +15,11 @@
 #
 
 BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/surya
-
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Inherit from proprietary files
 include vendor/xiaomi/surya/BoardConfigVendor.mk
@@ -98,6 +97,10 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 TARGET_KERNEL_CONFIG := surya_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
++TARGET_KERNEL_CLANG_COMPILE := true
+KERNEL_CC := CC=clang
+TARGET_KERNEL_CLANG_VERSION := clang-r536225
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/$(TARGET_KERNEL_CLANG_VERSION)
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
