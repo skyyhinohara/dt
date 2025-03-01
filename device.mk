@@ -35,6 +35,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # XiaomiParts
 $(call inherit-product, device/xiaomi/surya/parts/parts.mk)
 
+# Kernel vintf
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+
 # Signing
 -include vendor/private-keys/keys/keys.mk
 
