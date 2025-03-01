@@ -62,7 +62,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
-        .add_needed('libcrypto_shim.so'),
+        .add_needed('libcrypto_shim.so')
+        .add-needed('libcomparetf2.so'),
+    ('vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so'): blob_fixup()
+        .add_needed('libcomparetf2.so'),
     ('vendor/lib64/libalAILDC.so', 'vendor/lib64/libalLDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')

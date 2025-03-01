@@ -35,6 +35,12 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # XiaomiParts
 $(call inherit-product, device/xiaomi/surya/parts/parts.mk)
 
+# Kernel vintf
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+
+# Signing
+-include vendor/private-keys/keys/keys.mk
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -118,6 +124,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     android.hardware.sensors@1.0-service \
+    libgui.vendor \
     libdng_sdk.vendor
 
 PRODUCT_PACKAGES += \
@@ -137,6 +144,9 @@ PRODUCT_PACKAGES += \
     libcamera_provider_shim \
     libui_shim.vendor \
     libpiex_shim \
+    libpiex \
+    libcomparetf2 \
+    libc++.vendor \
     libpng.vendor
 
 # Dex/ART optimization
@@ -459,6 +469,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
+    firmware/xiaomi/surya \
     vendor/qcom/opensource/usb/etc
 
 # Speed profile services and wifi-service to reduce RAM and storage
