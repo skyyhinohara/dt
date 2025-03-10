@@ -41,14 +41,12 @@ def AddImage(info, basename, dest):
 def AddImageRadio(info, basename, dest):
   name = basename
   path = "RADIO/" + name
-  if path not in info.input_zip.namelist():
-    return
-
-  data = info.input_zip.read("RADIO/" + basename)
-  fwpath =  "firmware/" + name
-  common.ZipWriteStr(info.output_zip, fwpath, data)
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (fwpath, dest))
+  if ("RADIO/" + basename) in info.input_zip.namelist():
+    fwpath =  "images/" + name
+    data = info.input_zip.read("RADIO/" + basename)
+    common.ZipWriteStr(info.output_zip, fwpath, data)
+    info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+    info.script.AppendExtra('package_extract_file("%s", "%s");' % (fwpath, dest))
 
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
