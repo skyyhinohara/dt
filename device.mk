@@ -35,6 +35,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # XiaomiParts
 $(call inherit-product, device/xiaomi/surya/parts/parts.mk)
 
+# Viper4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Kernel vintf
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 

@@ -23,6 +23,7 @@ AXION_MAINTAINER := Skyy丨アラタ
 AXION_PROCESSOR := Snapdragon_732G
 AXION_CPU_BIG_CORES := 0,1
 AXION_CPU_SMALL_CORES := 2,3,4,5,6,7
+TARGET_INCLUDE_VIPERFX := true
 
 # Device Manufacturer
 PRODUCT_NAME := lineage_surya
