@@ -35,6 +35,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # XiaomiParts
 $(call inherit-product, device/xiaomi/surya/parts/parts.mk)
 
+# GalleryGO
+$(call inherit-product-if-exists, vendor/prebuilts/GalleryGO/config.mk)
+
 # Viper4AndroidFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
