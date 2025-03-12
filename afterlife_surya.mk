@@ -13,9 +13,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_surya
+# afterlife official flags
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+AFTERLIFE_MAINTAINER := Skyy丨アラタ
+
+# Offline Charging
+USE_PIXEL_CHARGING := true
+
+# disable/enable blur support, default is false
+TARGET_SUPPORTS_BLUR := true
+
+# Device Manufacturer
+PRODUCT_NAME := afterlife_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
