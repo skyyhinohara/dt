@@ -51,3 +51,7 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.q
 
 # Touchpanel
 genfscon sysfs /touchpanel                                                           u:object_r:sysfs_touchpanel:s0
+
+# Axion Tunings
+genfscon proc /sys/vm/vfs_cache_pressure u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/dirty_ratio u:object_r:proc_dirty:s0
