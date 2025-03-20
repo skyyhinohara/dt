@@ -26,9 +26,6 @@ $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 # Firmware
 $(call inherit-product, firmware/xiaomi/surya/Android.mk)
 
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
