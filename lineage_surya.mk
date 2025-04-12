@@ -25,6 +25,9 @@ AXION_CPU_BIG_CORES := 6,7
 AXION_CPU_SMALL_CORES := 0,1,2,3,4,5
 TARGET_INCLUDE_VIPERFX := true
 
+# bypass charging can be supported
+BYPASS_CHARGE_SUPPORTED := true
+
 # Device Manufacturer
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
