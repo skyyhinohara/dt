@@ -21,6 +21,9 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 WITH_GMS := true
 WITH_GMS_VARIANT := pico
 
+# Additional
+WITH_KSU := true
+
 # Product Manufacturer
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
