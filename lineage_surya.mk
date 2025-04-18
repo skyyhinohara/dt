@@ -28,6 +28,9 @@ TARGET_INCLUDE_VIPERFX := true
 # bypass charging can be supported
 BYPASS_CHARGE_SUPPORTED := true
 
+# Additional
+WITH_KSU := true
+
 # Device Manufacturer
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
