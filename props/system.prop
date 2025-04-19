@@ -37,6 +37,13 @@ persist.sys.fuse.passthrough.enable=true
 # IMS
 persist.vendor.qti.telephony.vt_cam_interface=2
 
+# InfinityX props
+ro.product.marketname=Poco X3 NFC
+ro.infinity.soc=Snapdragon® 732G
+ro.infinity.battery=5160 mAh
+ro.infinity.display=1080 x 2400, 120 Hz
+ro.infinity.camera=64MP + 13MP + 2MP + 2MP
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
