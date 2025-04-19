@@ -15,6 +15,13 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Horizon Stuffs
+HORIZON_MAINTAINER := Skyy丨アラタ
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GMS := true
+WITH_GMS_VARIANT := pico
+
+# Product Manufacturer
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
