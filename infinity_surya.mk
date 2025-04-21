@@ -22,8 +22,11 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := false
 WITH_GAPPS := true
-TARGET_SHIPS_FULL_GAPPS := true
+WITH_GMS := true
 USE_MOTO_CALCULATOR := false
+
+# Additional
+WITH_KSU := true
 
 # Product Manufacturer
 PRODUCT_NAME := infinity_surya

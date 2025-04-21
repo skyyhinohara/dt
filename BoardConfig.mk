@@ -98,8 +98,11 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-
+ifeq ($(WITH_KSU),true)
+TARGET_KERNEL_CONFIG := surya_ksu_defconfig
+else
 TARGET_KERNEL_CONFIG := surya_defconfig
+endif
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 +TARGET_KERNEL_CLANG_COMPILE := true
 KERNEL_CC := CC=clang
