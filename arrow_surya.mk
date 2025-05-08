@@ -23,6 +23,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Additional
 TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_SUPPORT_BYPASS_CHARGE := true
 
 # Product Manufacturer
 PRODUCT_NAME := arrow_surya
