@@ -33,6 +33,9 @@ PRODUCT_COPY_FILES += \
 # Signing keys
 -include vendor/private-keys/keys/keys.mk
 
+# Firmware
+$(call inherit-product, firmware/xiaomi/surya/Android.mk)
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -429,6 +432,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    firmware/xiaomi/surya \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi
