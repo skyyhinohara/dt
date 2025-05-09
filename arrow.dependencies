@@ -1,0 +1,50 @@
+[
+  {
+    "repository": "HinohArata/surya_vendor",
+    "target_path": "vendor/xiaomi/surya",
+    "remote": "github",
+    "branch": "lineage-20"
+  },
+  {
+    "repository": "skyyhinohara/kernel_xiaomi_surya",
+    "target_path": "kernel/xiaomi/surya",
+    "remote": "github",
+    "branch": "anonym-daemon"
+  },
+  {
+    "repository": "HinohArata/keys",
+    "target_path": "vendor/private-keys/keys",
+    "remote": "github",
+    "branch": "full"
+  },
+  {
+    "repository": "HinohArata/firmware_xiaomi_surya",
+    "target_path": "firmware/xiaomi/surya",
+    "remote": "gitea",
+    "branch": "fifteen"
+  },
+  {
+    "repository": "HinohArata/device_xiaomi_surya-miuicamera",
+    "target_path": "device/xiaomi/surya-miuicamera",
+    "remote": "gitlab",
+    "branch": "tiramisu"
+  },
+  {
+    "repository": "HinohArata/vendor_xiaomi_surya-miuicamera",
+    "target_path": "vendor/xiaomi/surya-miuicamera",
+    "remote": "gitlab",
+    "branch": "qpr1"
+  },
+  {
+    "repository": "HinohArata/parts",
+    "target_path": "device/xiaomi/surya/parts",
+    "remote": "github",
+    "branch": "revamp"
+  },
+  {
+    "repository"   : "ArrowOS-Devices/android_hardware_xiaomi",
+    "target_path"  : "hardware/xiaomi",
+    "remote": "github",
+    "branch": "arrow-13.1"
+  }
+]
